@@ -1,0 +1,32 @@
+<h1 [style.color]="color" [class]="bgColor">{{title | nvl}}</h1>
+
+<div class="bg-color">12312321</div>
+<div>
+    <label>email</label>
+    <input type="email" [(ngModel)]="credentail.email" >
+   </div>
+   <div>
+    <label>password</label>
+    <input type="password" [(ngModel)]="credentail.password">
+   </div>
+   <button (click)="login(credentail.email, credentail.password)">Login</button>   
+   <ul>
+        <li>{{ 1 | formatNum }} </li>
+        <li>{{ 23 | formatNum }} </li>
+        <li>{{ '3AB' | formatNum }} </li>
+        <li>{{ 123456 | formatNum }} </li>
+        <li>{{ {} | formatNum }} </li>
+        <li>{{ 1 | formatNum:7 }} </li>
+        <li>{{ 23 | formatNum:7 }} </li>
+        <li>{{ '3AB' | formatNum:7 }} </li>
+       </ul>
+       
+       
+   {{credentail.email | formatNum:7}}
+
+
+
+<!-- <li *ngFor="let msg of posts">{{msg.id}} - {{msg.title}}</li>
+
+<li *ngFor="let msg of allPosts">{{msg.id}} - {{msg.title}}</li> -->
+

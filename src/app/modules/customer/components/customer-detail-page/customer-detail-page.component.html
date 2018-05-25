@@ -1,0 +1,17 @@
+ <div [style.background-color]='bgColor'>
+ customer-detail-page
+<h1>Customers</h1>
+<ul>
+  <li> Id - {{ customers?.id }} </li>
+  <li> Name - {{ customers?.name }} </li>
+  <li> username - {{ customers?.username }} </li>
+  <li> email - {{ customers?.email }} </li>
+  <li> phone - {{ customers?.phone }} </li>
+  <li> website - {{ customers?.website }} </li>
+</ul>
+
+<a href="/customers/list">back</a>
+
+<a routerLink="/customers/3">Next</a>
+
+</div>

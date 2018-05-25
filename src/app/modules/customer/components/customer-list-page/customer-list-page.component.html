@@ -1,0 +1,7 @@
+<h1>Customers</h1>
+<ul>
+  <li *ngFor="let cust of customers">
+    <a [routerLink]="['../', cust.id]"> {{ cust.id }} - {{ cust.name }}</a> 
+   <!-- <a [routerLink]="[cust.id, 'color:red']"> {{ cust.id }} - {{ cust.name }}</a> -->
+  </li>
+</ul>

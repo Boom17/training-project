@@ -1,0 +1,14 @@
+<app-header title="{{headerTitle}}" (loginTrial)="countLogin($event)" *ngIf="display"></app-header>
+Name: {{headerTitle}}<br>
+display: {{display}}<br>
+
+
+<p>login attempts: {{loginAttempts}}</p>
+asdasd
+<br>
+<h3 *ngFor="let message of msg" >{{message}}</h3>
+
+<!-- <app-content></app-content>  -->
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

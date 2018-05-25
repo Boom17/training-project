@@ -1,0 +1,25 @@
+<form #frm="ngForm">
+  <div>
+<label>name</label>
+<input type="text" name="name" #name="ngModel" ngModel required minlength="3">
+<small *ngIf="!name.valid && !name.pristine" style="color:red">Please insert min 3 charater</small>
+  </div>    
+  <div ngModelGroup="address">
+      <div>
+          <label>line1</label>
+  
+.    <input type="text" name="line" ngModel>
+            </div>    
+        <div>
+          <label>postcode</label>  
+          <input type="text" name="postcode" ngModel minlenght=3 maxlength=5>
+            </div>    
+
+  </div>    
+  <button type="button" (click)="submit( frm.valid, frm.value)">Submit</button>
+  <pre>
+      {{frm.valid}}
+{{frm.value | json}}
+
+  </pre>
+  </form>

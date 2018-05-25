@@ -1,0 +1,22 @@
+<form [formGroup]="myForm">
+  <div>
+    <label>name</label>
+    <input type="text" formControlName='name'>
+  </div>
+  <div [formGroupName]="myForm.address">
+    <p>address</p>
+    <div>
+        <label>line</label>
+        <input type="text" formControlName='line'>
+    </div>
+    <div>
+        <label>postcode</label>
+        <input type="text" formControlName='postcode'>
+    </div>
+  </div>
+   <button type="submit" (click)="submit()">Submit</button>
+ </form>
+<pre>
+{{myForm | json}}
+
+</pre>
